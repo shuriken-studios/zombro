@@ -7,6 +7,8 @@ public class LeeController : MonoBehaviour
     public GameObject leeHighlighter;
     public Camera leeCam;
     public static bool leeActive = true;
+    public Transform Chris;
+    public Transform John;
 
     void Start()
     {
@@ -47,8 +49,37 @@ public class LeeController : MonoBehaviour
 
         if (!leeActive)
         {
+
             leeCam.enabled = false; //Lee's camera is deactivated.
             leeHighlighter.SetActive(false); //Lee is not the highlighted character.
+
+            if (ChrisController.chrisActive)
+            {
+                //rotate to look at the player
+                transform.LookAt(Chris.position);
+                transform.Rotate(new Vector3(0, -90, 0), Space.Self);//correcting the original rotation
+
+
+                //move towards the player
+                if (Vector3.Distance(transform.position, Chris.position) > 5f)
+                {//move if distance from target is greater than 1
+                    transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
+                }
+            }
+
+            if (JohnController.johnActive)
+            {
+                //rotate to look at the player
+                transform.LookAt(John.position);
+                transform.Rotate(new Vector3(0, -90, 0), Space.Self);//correcting the original rotation
+
+
+                //move towards the player
+                if (Vector3.Distance(transform.position, John.position) > 5f)
+                {//move if distance from target is greater than 1
+                    transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
+                }
+            }
         }
     }
 }

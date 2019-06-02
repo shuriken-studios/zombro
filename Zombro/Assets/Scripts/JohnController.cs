@@ -8,6 +8,8 @@ public class JohnController : MonoBehaviour
     public GameObject johnHighlighter;
     public Camera johnCam;
     public static bool johnActive;
+    public Transform Lee;
+    public Transform Chris;
 
     void Start()
     {
@@ -51,6 +53,34 @@ public class JohnController : MonoBehaviour
         {
             johnCam.enabled = false; //John's camera is deactivated.
             johnHighlighter.SetActive(false); //John is not the highlighted character.
+
+            if (LeeController.leeActive)
+            {
+                //rotate to look at the player
+                transform.LookAt(Lee.position);
+                transform.Rotate(new Vector3(0, -90, 0), Space.Self);//correcting the original rotation
+
+
+                //move towards the player
+                if (Vector3.Distance(transform.position, Lee.position) > 5f)
+                {//move if distance from target is greater than 1
+                    transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
+                }
+            }
+
+            if (ChrisController.chrisActive)
+            {
+                //rotate to look at the player
+                transform.LookAt(Chris.position);
+                transform.Rotate(new Vector3(0, -90, 0), Space.Self);//correcting the original rotation
+
+
+                //move towards the player
+                if (Vector3.Distance(transform.position, Chris.position) > 5f)
+                {//move if distance from target is greater than 1
+                    transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
+                }
+            }
         }
     }
 }
