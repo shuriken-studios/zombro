@@ -15,7 +15,7 @@ public class LeeController : MonoBehaviour
 
     void Update()
     {
-            LeeMovement();
+        LeeMovement();
 
         if (Input.GetKeyDown(KeyCode.Alpha2)) //Player switches to Chris
         {
@@ -52,3 +52,4 @@ public class LeeController : MonoBehaviour
         }
     }
 }
+
