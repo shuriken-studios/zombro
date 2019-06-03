@@ -4,7 +4,6 @@ using System.Collections;
 public class LeeController : MonoBehaviour
 {
     public float speed;
-    public GameObject leeHighlighter;
     public Camera leeCam;
     public static bool leeActive = true;
     public Transform Chris;
@@ -43,15 +42,12 @@ public class LeeController : MonoBehaviour
             Vector3 leeMovement = new Vector3(hor, 0, ver);
             leeMovement = Vector3.ClampMagnitude(leeMovement, 1) * speed * Time.deltaTime;
             transform.Translate(leeMovement, Space.Self);
-
-            leeHighlighter.SetActive(true); //Lee is the highlighted character since he is being controlled by the player.
         }
 
         if (!leeActive)
         {
 
             leeCam.enabled = false; //Lee's camera is deactivated.
-            leeHighlighter.SetActive(false); //Lee is not the highlighted character.
 
             if (ChrisController.chrisActive)
             {

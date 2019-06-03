@@ -5,7 +5,6 @@ using UnityEngine;
 public class ChrisController : MonoBehaviour
 {
     public float speed;
-    public GameObject chrisHighlighter;
     public Camera chrisCam;
     public static bool chrisActive;
     public Transform Lee;
@@ -44,13 +43,10 @@ public class ChrisController : MonoBehaviour
             Vector3 chrisMovement = new Vector3(hor, 0, ver);
             chrisMovement = Vector3.ClampMagnitude(chrisMovement, 1) * speed * Time.deltaTime;
             transform.Translate(chrisMovement, Space.Self);
-
-            chrisHighlighter.SetActive(true); //Chris is the highlighted character since he is being controlled by the player.
         }
         if (!chrisActive)
         {
             chrisCam.enabled = false; //Chris's camera is deactivated.
-            chrisHighlighter.SetActive(false); //Chris is not the highlighted character.
 
             if (LeeController.leeActive)
             {

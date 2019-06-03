@@ -5,7 +5,6 @@ using UnityEngine;
 public class JohnController : MonoBehaviour
 {
     public float speed;
-    public GameObject johnHighlighter;
     public Camera johnCam;
     public static bool johnActive;
     public Transform Lee;
@@ -45,14 +44,11 @@ public class JohnController : MonoBehaviour
             Vector3 johnMovement = new Vector3(hor, 0, ver);
             johnMovement = Vector3.ClampMagnitude(johnMovement, 1) * speed * Time.deltaTime;
             transform.Translate(johnMovement, Space.Self);
-
-            johnHighlighter.SetActive(true); //John is the highlighted character since he is being controlled by the player.
         }
 
         if (!johnActive)
         {
             johnCam.enabled = false; //John's camera is deactivated.
-            johnHighlighter.SetActive(false); //John is not the highlighted character.
 
             if (LeeController.leeActive)
             {
