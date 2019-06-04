@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\ChrisController.cs" />
     <Compile Include="Assets\Scripts\JohnController.cs" />
     <Compile Include="Assets\Scripts\LeeController.cs" />
+    <Compile Include="Assets\Scripts\LeePistol.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Peay/Documents/GitHub/zombro/Zombro/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 494}
   m_MaxSize: {x: 18008, y: 14044}
   vertical: 0
-  controlID: 21078
+  controlID: 6573
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 494}
   m_MaxSize: {x: 10002, y: 14044}
   vertical: 1
-  controlID: 21079
+  controlID: 6574
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -366,9 +366,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 14.638217, y: -5.0523405, z: -12.170913}
+    m_Target: {x: 14.8295965, y: -2.4652007, z: -12.805927}
     speed: 2
-    m_Value: {x: 14.638217, y: -5.0523405, z: -12.170913}
+    m_Value: {x: 14.8295965, y: -2.4652007, z: -12.805927}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -397,13 +397,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.110930845, y: 0.052150432, z: -0.0058305543, w: -0.9924667}
+    m_Target: {x: 0.20804778, y: -0.7479312, z: 0.27413028, w: 0.5676452}
     speed: 2
-    m_Value: {x: -0.11093084, y: 0.05215043, z: -0.0058305543, w: -0.9924666}
+    m_Value: {x: -0.20804222, y: 0.7479112, z: -0.27412295, w: -0.56763005}
   m_Size:
-    m_Target: 9.513183
+    m_Target: 5.8041677
     speed: 2
-    m_Value: 9.513183
+    m_Value: 5.8041677
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -556,19 +556,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts
+  - Assets
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Peay\Documents\GitHub\zombro\Zombro
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 3c2b0000
-    m_LastClickedID: 11068
+    m_SelectedIDs: 5a290000
+    m_LastClickedID: 10586
     m_ExpandedIDs: 000000005a29000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -709,7 +709,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 8cfbffff6c2c00007a2c0000902c0000
+      m_ExpandedIDs: 8cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
