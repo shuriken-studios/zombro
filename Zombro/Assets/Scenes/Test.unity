@@ -120,7 +120,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &354269624
+--- !u!1 &607373787
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,7 +128,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 354269625}
+  - component: {fileID: 607373788}
   m_Layer: 0
   m_Name: BulletSpawn
   m_TagString: Untagged
@@ -136,15 +136,15 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &354269625
+--- !u!4 &607373788
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 354269624}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.6684389, y: 0.33857226, z: 1.0782347}
+  m_GameObject: {fileID: 607373787}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.817}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1193168673}
@@ -623,7 +623,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 963194228}
-  - {fileID: 354269625}
+  - {fileID: 607373788}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -640,12 +640,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pistolActive: 0
-  Bullet: {fileID: 1338089740519260085, guid: 9827df76197227c4c87e1a94ec4680c3, type: 3}
-  spawnPoint: {fileID: 354269625}
-  bulletSpeed: 10
-  bulletEnd: 3
-  canShoot: 1
-  waitBeforeNextShot: 0.25
+  pistolBulletPrefab: {fileID: 6205685181159448154, guid: 9827df76197227c4c87e1a94ec4680c3,
+    type: 3}
+  spawnPoint: {fileID: 607373788}
 --- !u!1 &1246580555
 GameObject:
   m_ObjectHideFlags: 0
