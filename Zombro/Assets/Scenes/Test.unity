@@ -670,6 +670,7 @@ MonoBehaviour:
     type: 3}
   bulletSpeed: 50
   spawnPoint: {fileID: 607373788}
+  pistolAmmo: 50
 --- !u!1 &1246580555
 GameObject:
   m_ObjectHideFlags: 0
