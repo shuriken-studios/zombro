@@ -5,7 +5,7 @@ using UnityEngine;
 public class JohnController : MonoBehaviour
 {
     public float speed;
-    public Camera johnCam;
+    //public Camera johnCam;
     public static bool johnActive;
     public Transform Lee;
     public Transform Chris;
@@ -36,25 +36,25 @@ public class JohnController : MonoBehaviour
     {
         if (johnActive)
         {
-            johnCam.enabled = true; //Chris's camera is activated. 
+            //johnCam.enabled = true; //Chris's camera is activated. 
 
             float hor = Input.GetAxis("Horizontal");
             float ver = Input.GetAxis("Vertical");
 
             Vector3 johnMovement = new Vector3(hor, 0, ver);
             johnMovement = Vector3.ClampMagnitude(johnMovement, 1) * speed * Time.deltaTime;
-            transform.Translate(johnMovement, Space.Self);
+            transform.Translate(johnMovement, Space.World);
         }
 
         if (!johnActive)
         {
-            johnCam.enabled = false; //John's camera is deactivated.
+            //johnCam.enabled = false; //John's camera is deactivated.
 
             if (LeeController.leeActive)
             {
                 //rotate to look at the player
                 transform.LookAt(Lee.position);
-                transform.Rotate(new Vector3(0, -90, 0), Space.Self);//correcting the original rotation
+                transform.Rotate(new Vector3(0, -90, 0), Space.World);//correcting the original rotation
 
 
                 //move towards the player
@@ -68,7 +68,7 @@ public class JohnController : MonoBehaviour
             {
                 //rotate to look at the player
                 transform.LookAt(Chris.position);
-                transform.Rotate(new Vector3(0, -90, 0), Space.Self);//correcting the original rotation
+                transform.Rotate(new Vector3(0, -90, 0), Space.World);//correcting the original rotation
 
 
                 //move towards the player

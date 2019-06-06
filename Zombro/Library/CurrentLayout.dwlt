@@ -112,10 +112,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 731
-  m_MinSize: {x: 707, y: 472}
-  m_MaxSize: {x: 18002, y: 14022}
+  m_MinSize: {x: 705, y: 472}
+  m_MaxSize: {x: 18000, y: 14022}
   vertical: 0
-  controlID: 6072
+  controlID: 33550
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 230, y: 472}
   m_MaxSize: {x: 10000, y: 14022}
   vertical: 1
-  controlID: 6073
+  controlID: 33570
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -159,7 +159,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1050
-    height: 454
+    height: 456
   m_MinSize: {x: 202, y: 222}
   m_MaxSize: {x: 4002, y: 4022}
   m_ActualView: {fileID: 12}
@@ -186,9 +186,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 454
+    y: 456
     width: 1050
-    height: 277
+    height: 275
   m_MinSize: {x: 232, y: 272}
   m_MaxSize: {x: 10002, y: 10022}
   m_ActualView: {fileID: 15}
@@ -273,7 +273,7 @@ MonoBehaviour:
     x: 0
     y: 20
     width: 1048
-    height: 432
+    height: 434
   m_ViewDataDictionary: {fileID: 0}
   m_VSyncEnabled: 0
   m_MaximizeOnPlay: 1
@@ -354,7 +354,7 @@ MonoBehaviour:
     x: 0
     y: 73.6
     width: 1050
-    height: 435
+    height: 437
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: 080eae9975f01d34e9165aa6d2e7142f
@@ -366,9 +366,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 15.819717, y: -4.3129416, z: -12.756137}
+    m_Target: {x: 15.146789, y: -4.956455, z: -14.350448}
     speed: 2
-    m_Value: {x: 15.819717, y: -4.3129416, z: -12.756137}
+    m_Value: {x: 15.146789, y: -4.956455, z: -14.350448}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -397,13 +397,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.1867981, y: -0.7203514, z: 0.21246292, w: 0.6333354}
+    m_Target: {x: 0.2950172, y: 0.4834847, z: -0.17719375, w: 0.8049078}
     speed: 2
-    m_Value: {x: -0.1867981, y: 0.7203514, z: -0.2124629, w: -0.6333354}
+    m_Value: {x: 0.29501718, y: 0.48348466, z: -0.17719375, w: 0.80490774}
   m_Size:
-    m_Target: 7.1917195
+    m_Target: 18.705261
     speed: 2
-    m_Value: 6.882028
+    m_Value: 17.89977
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -540,9 +540,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 527.2
+    y: 529.60004
     width: 1050
-    height: 258
+    height: 256
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -556,19 +556,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets
+  - Assets/Scripts
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Peay\Documents\GitHub\zombro\Zombro
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 5e290000
-    m_LastClickedID: 10590
+    m_SelectedIDs: 442b0000
+    m_LastClickedID: 11076
     m_ExpandedIDs: 000000005e29000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -674,9 +674,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 527.2
+    y: 529.60004
     width: 1050
-    height: 258
+    height: 256
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &17
 MonoBehaviour:
@@ -707,9 +707,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: fedbffff
-      m_LastClickedID: -9218
-      m_ExpandedIDs: 8cfbffff
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 8cfbffff762c00008c2c0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 

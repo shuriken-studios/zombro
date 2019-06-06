@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class ChrisController : MonoBehaviour
 {
+
     public float speed;
-    public Camera chrisCam;
+    //public Camera chrisCam;
     public static bool chrisActive;
     public Transform Lee;
     public Transform John;
@@ -35,24 +36,24 @@ public class ChrisController : MonoBehaviour
     {
         if (chrisActive)
         {
-            chrisCam.enabled = true; //Chris's camera is activated. 
+            //chrisCam.enabled = true; //Chris's camera is activated. 
 
             float hor = Input.GetAxis("Horizontal");
             float ver = Input.GetAxis("Vertical");
 
             Vector3 chrisMovement = new Vector3(hor, 0, ver);
             chrisMovement = Vector3.ClampMagnitude(chrisMovement, 1) * speed * Time.deltaTime;
-            transform.Translate(chrisMovement, Space.Self);
+            transform.Translate(chrisMovement, Space.World);
         }
         if (!chrisActive)
         {
-            chrisCam.enabled = false; //Chris's camera is deactivated.
+            //chrisCam.enabled = false; //Chris's camera is deactivated.
 
             if (LeeController.leeActive)
             {
                 //rotate to look at the player
                 transform.LookAt(Lee.position);
-                transform.Rotate(new Vector3(0, -90, 0), Space.Self);//correcting the original rotation
+                transform.Rotate(new Vector3(0, -90, 0), Space.World);//correcting the original rotation
 
 
                 //move towards the player
@@ -66,7 +67,7 @@ public class ChrisController : MonoBehaviour
             {
                 //rotate to look at the player
                 transform.LookAt(John.position);
-                transform.Rotate(new Vector3(0, -90, 0), Space.Self);//correcting the original rotation
+                transform.Rotate(new Vector3(0, -90, 0), Space.World);//correcting the original rotation
 
 
                 //move towards the player
