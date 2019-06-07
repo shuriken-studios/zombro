@@ -8,10 +8,12 @@ public class LeePistol : MonoBehaviour
     public PistolBulletController pistolBullet;
     public float bulletSpeed; //Speed of bullet
     public Transform spawnPoint;
-    public float pistolAmmo = 50; //Amount of ammunition
+    public AudioSource pistolShot;
+    //public float pistolAmmo = 50; //Amount of ammunition
 
     void Start()
     {
+        pistolShot = GetComponent<AudioSource>();
         pistolActive = true;
         firing = true; //The player can fire the first shot without waiting. 
     }
@@ -19,32 +21,18 @@ public class LeePistol : MonoBehaviour
     void Update()
     {
 
-        if (pistolAmmo >= 300) //Sets a cap of 300 pistol bullets
-        {
-            pistolAmmo = 300;
-        }
-
-        if (pistolAmmo <= 0) //Sets a min of 0 bullets.
-        {
-            pistolAmmo = 0;
-        }
-
         if (LeeController.leeActive) //Lee must be in control for the player to use his gun
         {
             if (pistolActive) //The pistol is the current weapon in use
             {
                 if (firing)
                 {
-                    if (pistolAmmo > 0)
-                    {
                         if (Input.GetMouseButtonDown(0)) //Fires a bullet when the player left-clicks.
                         {
                             PistolBulletController bulletInstance = Instantiate(pistolBullet, spawnPoint.position, spawnPoint.rotation) as PistolBulletController;
                             bulletInstance.speed = bulletSpeed;
-                            pistolAmmo -= 1;
-                            Debug.Log(pistolAmmo);
                             StartCoroutine(Fire());
-                        }
+                            pistolShot.Play();
                     }
                 }
             }
