@@ -20,19 +20,22 @@ public class LeePistol : MonoBehaviour
 
     void Update()
     {
+        if (LeeController.leeActive)
+        {
             if (pistolActive) //The pistol is the current weapon in use
             {
                 if (firing)
                 {
-                        if (Input.GetMouseButtonDown(0)) //Fires a bullet when the player left-clicks.
-                        {
-                            PistolBulletController bulletInstance = Instantiate(pistolBullet, spawnPoint.position, spawnPoint.rotation) as PistolBulletController;
-                            bulletInstance.speed = bulletSpeed;
-                            StartCoroutine(Fire());
-                            pistolShot.Play();
-                        }
+                    if (Input.GetMouseButtonDown(0)) //Fires a bullet when the player left-clicks.
+                    {
+                        PistolBulletController bulletInstance = Instantiate(pistolBullet, spawnPoint.position, spawnPoint.rotation) as PistolBulletController;
+                        bulletInstance.speed = bulletSpeed;
+                        StartCoroutine(Fire());
+                        pistolShot.Play();
+                    }
                 }
             }
+        }
     }
     
     IEnumerator Fire() //This method sets the period of time in between fires.
