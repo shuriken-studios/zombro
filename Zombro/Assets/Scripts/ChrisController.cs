@@ -40,10 +40,20 @@ public class ChrisController : MonoBehaviour
 
             float hor = Input.GetAxis("Horizontal");
             float ver = Input.GetAxis("Vertical");
+            //transform.Rotate(0, Input.GetAxis("Rotate") * 60 * Time.deltaTime, 0);
+            Vector3 chrisMovement = new Vector3(hor, 0, ver);
+            chrisMovement = Vector3.ClampMagnitude(chrisMovement, 1) * speed * Time.deltaTime;
+            transform.Translate(chrisMovement, Space.Self);
+            transform.Rotate(0, Input.GetAxis("Horizontal"), 0);
+
+            /*
+            float hor = Input.GetAxis("Horizontal");
+            float ver = Input.GetAxis("Vertical");
 
             Vector3 chrisMovement = new Vector3(hor, 0, ver);
             chrisMovement = Vector3.ClampMagnitude(chrisMovement, 1) * speed * Time.deltaTime;
             transform.Translate(chrisMovement, Space.World);
+            */
         }
         if (!chrisActive)
         {
@@ -53,7 +63,7 @@ public class ChrisController : MonoBehaviour
             {
                 //rotate to look at the player
                 transform.LookAt(Lee.position);
-                transform.Rotate(new Vector3(0, -90, 0), Space.World);//correcting the original rotation
+                transform.Rotate(new Vector3(0, -90, 0), Space.Self);//correcting the original rotation
 
 
                 //move towards the player
@@ -67,7 +77,7 @@ public class ChrisController : MonoBehaviour
             {
                 //rotate to look at the player
                 transform.LookAt(John.position);
-                transform.Rotate(new Vector3(0, -90, 0), Space.World);//correcting the original rotation
+                transform.Rotate(new Vector3(0, -90, 0), Space.Self);//correcting the original rotation
 
 
                 //move towards the player

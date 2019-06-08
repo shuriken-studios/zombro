@@ -43,21 +43,14 @@ public class LeeController : MonoBehaviour
         {
             leeCam.enabled = true; //Lee's camera is activated. 
 
+           
             float hor = Input.GetAxis("Horizontal");
             float ver = Input.GetAxis("Vertical");
-            transform.Rotate(0, Input.GetAxis("Rotate") * 60 * Time.deltaTime, 0);
+            //transform.Rotate(0, Input.GetAxis("Rotate") * 60 * Time.deltaTime, 0);
             Vector3 leeMovement = new Vector3(hor, 0, ver);
             leeMovement = Vector3.ClampMagnitude(leeMovement, 1) * speed * Time.deltaTime;
-            transform.Translate(leeMovement, Space.World);
-
-            /*
-            transform.Rotate(0, Input.GetAxis("Rotate") * 60 * Time.deltaTime, 0);
-            Vector3 moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-            moveDirection = transform.TransformDirection(moveDirection);
-            moveDirection *= speed;
-            if (Input.GetButton("Jump"))
-                moveDirection.y = jumpSpeed;
-                */
+            transform.Translate(leeMovement, Space.Self);
+            transform.Rotate(0, Input.GetAxis("Horizontal"), 0);
         }
         /*
         float hAxis = Input.GetAxis("Horizontal");
@@ -87,7 +80,7 @@ public class LeeController : MonoBehaviour
             {
                 //rotate to look at the player
                 transform.LookAt(Chris.position);
-                transform.Rotate(new Vector3(0, -90, 0), Space.World);//correcting the original rotation
+                transform.Rotate(new Vector3(0, -90, 0), Space.Self);//correcting the original rotation
 
 
                 //move towards the player
@@ -101,7 +94,7 @@ public class LeeController : MonoBehaviour
             {
                 //rotate to look at the player
                 transform.LookAt(John.position);
-                transform.Rotate(new Vector3(0, -90, 0), Space.World);//correcting the original rotation
+                transform.Rotate(new Vector3(0, -90, 0), Space.Self);//correcting the original rotation
 
 
                 //move towards the player
