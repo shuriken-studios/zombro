@@ -20,9 +20,6 @@ public class LeePistol : MonoBehaviour
 
     void Update()
     {
-
-        if (LeeController.leeActive) //Lee must be in control for the player to use his gun
-        {
             if (pistolActive) //The pistol is the current weapon in use
             {
                 if (firing)
@@ -33,10 +30,9 @@ public class LeePistol : MonoBehaviour
                             bulletInstance.speed = bulletSpeed;
                             StartCoroutine(Fire());
                             pistolShot.Play();
-                    }
+                        }
                 }
             }
-        }
     }
     
     IEnumerator Fire() //This method sets the period of time in between fires.
@@ -45,5 +41,7 @@ public class LeePistol : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         firing = true;
     }
-
 }
+
+
+
