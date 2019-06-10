@@ -1160,6 +1160,11 @@ PrefabInstance:
       propertyPath: John
       value: 
       objectReference: {fileID: 9059158677223924174}
+    - target: {fileID: 1572275577273186074, guid: a4a30cc600c72d044ae688fcdff420cb,
+        type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5583560328856867553, guid: a4a30cc600c72d044ae688fcdff420cb,
         type: 3}
       propertyPath: bulletSpeed
