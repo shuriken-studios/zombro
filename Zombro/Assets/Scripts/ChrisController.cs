@@ -67,7 +67,7 @@ public class ChrisController : MonoBehaviour
 
 
                 //move towards the player
-                if (Vector3.Distance(transform.position, Lee.position) > 5f)
+                if (Vector3.Distance(transform.position, Lee.position) > 10f)
                 {//move if distance from target is greater than 1
                     transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
                 }
@@ -81,7 +81,7 @@ public class ChrisController : MonoBehaviour
 
 
                 //move towards the player
-                if (Vector3.Distance(transform.position, John.position) > 5f)
+                if (Vector3.Distance(transform.position, John.position) > 10f)
                 {//move if distance from target is greater than 1
                     transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
                 }

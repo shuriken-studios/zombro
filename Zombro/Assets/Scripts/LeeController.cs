@@ -43,7 +43,7 @@ public class LeeController : MonoBehaviour
         {
             leeCam.enabled = true; //Lee's camera is activated. 
 
-           
+            
             float hor = Input.GetAxis("Horizontal");
             float ver = Input.GetAxis("Vertical");
             //transform.Rotate(0, Input.GetAxis("Rotate") * 60 * Time.deltaTime, 0);
@@ -51,26 +51,8 @@ public class LeeController : MonoBehaviour
             leeMovement = Vector3.ClampMagnitude(leeMovement, 1) * speed * Time.deltaTime;
             transform.Translate(leeMovement, Space.Self);
             transform.Rotate(0, Input.GetAxis("Horizontal"), 0);
+   
         }
-        /*
-        float hAxis = Input.GetAxis("Horizontal");
-        float vAxis = Input.GetAxis("Vertical");
-
-        Vector3 movement = new Vector3(hAxis, 0f, vAxis);
-        rb.position += movement * speed * Time.deltaTime;
-
-        Quaternion deltaRotation = Quaternion.Euler(m_EulerAngleVelocity * Time.deltaTime);
-        rb.MoveRotation(rb.rotation * deltaRotation);
-        */
-
-        /*
-        float hor = Input.GetAxis("Horizontal");
-        float ver = Input.GetAxis("Vertical");
-        transform.Rotate(0, Input.GetAxis("Rotate") * 60 * Time.deltaTime, 0);
-        Vector3 leeMovement = new Vector3(hor, 0, ver);
-        leeMovement = Vector3.ClampMagnitude(leeMovement, 1) * speed * Time.deltaTime;
-        transform.Translate(leeMovement, Space.World);
-        */
 
         if (!leeActive)
         {
@@ -84,7 +66,7 @@ public class LeeController : MonoBehaviour
 
 
                 //move towards the player
-                if (Vector3.Distance(transform.position, Chris.position) > 5f)
+                if (Vector3.Distance(transform.position, Chris.position) > 10f)
                 {//move if distance from target is greater than 1
                     transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
                 }
@@ -98,7 +80,7 @@ public class LeeController : MonoBehaviour
 
 
                 //move towards the player
-                if (Vector3.Distance(transform.position, John.position) > 5f)
+                if (Vector3.Distance(transform.position, John.position) > 10f)
                 {//move if distance from target is greater than 1
                     transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
                 }
