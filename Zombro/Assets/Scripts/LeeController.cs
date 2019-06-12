@@ -49,9 +49,10 @@ public class LeeController : MonoBehaviour
             //transform.Rotate(0, Input.GetAxis("Rotate") * 60 * Time.deltaTime, 0);
             Vector3 leeMovement = new Vector3(hor, 0, ver);
             leeMovement = Vector3.ClampMagnitude(leeMovement, 1) * speed * Time.deltaTime;
-            transform.Translate(leeMovement, Space.Self);
-            transform.Rotate(0, Input.GetAxis("Horizontal"), 0);
-   
+            transform.Translate(leeMovement, Space.World);
+            //transform.Rotate(0, Input.GetAxis("Horizontal"), 0);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(leeMovement), 45F);
+
         }
 
         if (!leeActive)
