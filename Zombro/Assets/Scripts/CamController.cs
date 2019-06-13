@@ -7,46 +7,34 @@ public class CamController : MonoBehaviour
     public GameObject Lee;
     public GameObject Chris;
     public GameObject John;
-
-    private Vector3 offset;            //Private variable to store the offset distance between the player and camera
-
-    // Use this for initialization
-    void Start()
-    {
-        if (LeeController.leeActive)
-        {
-            //Calculate and store the offset value by getting the distance between the player's position and camera's position.
-            offset = transform.position - Lee.transform.position;
-        }
-
-        if (ChrisController.chrisActive)
-        {
-            offset = transform.position - Chris.transform.position;
-        }
-
-        if (JohnController.johnActive)
-        {
-            offset = transform.position - John.transform.position;
-        }
-    }
+    public float cameraWidth;
+    public float cameraHeight;
 
     // LateUpdate is called after Update each frame
-    void LateUpdate()
+    void Update()
     {
         if (LeeController.leeActive)
         {
-            // Set the position of the camera's transform to be the same as the player's, but offset by the calculated offset distance.
-            transform.position = Lee.transform.position + offset;
+            Vector3 pos = Lee.transform.position;
+            pos.y += cameraHeight;
+            pos.z += cameraWidth;
+            transform.position = pos;
         }
 
         if (ChrisController.chrisActive)
         {
-            transform.position = Chris.transform.position + offset;
+            Vector3 pos = Chris.transform.position;
+            pos.y += cameraHeight;
+            pos.z += cameraWidth;
+            transform.position = pos;
         }
         
         if (JohnController.johnActive)
         {
-            transform.position = John.transform.position + offset;
+            Vector3 pos = John.transform.position;
+            pos.y += cameraHeight;
+            pos.z = cameraWidth;
+            transform.position = pos;
         }
     }
 }

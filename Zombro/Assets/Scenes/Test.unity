@@ -524,6 +524,8 @@ MonoBehaviour:
   Lee: {fileID: 1448288938}
   Chris: {fileID: 1023714523}
   John: {fileID: 372587031}
+  cameraWidth: -5
+  cameraHeight: 5
 --- !u!81 &1310315905
 AudioListener:
   m_ObjectHideFlags: 0
@@ -582,13 +584,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1310315903}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.9, y: -1.2, z: -34.3}
+  m_LocalRotation: {x: 0.3420201, y: 0, z: 0, w: 0.9396927}
+  m_LocalPosition: {x: 21.9, y: -1.2, z: -36.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 40, y: 0, z: 0}
 --- !u!1 &1448288938 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2508261332525884184, guid: a4a30cc600c72d044ae688fcdff420cb,
@@ -607,11 +609,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c460f325e5c2c94b9439318287bcf4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  moveDirection: {x: 0, y: 0, z: 0}
-  pivot: {fileID: 0}
-  rotateSpeed: 3
-  Lee: {fileID: 7465860541594795236}
 --- !u!114 &1448288946
 MonoBehaviour:
   m_ObjectHideFlags: 0
