@@ -5,19 +5,13 @@ using UnityEngine;
 public class LeeController : MonoBehaviour
 {
     public float speed;
-    public float jumpSpeed = 3;
-    public Camera leeCam;
     public static bool leeActive;
     public Transform Chris;
     public Transform John;
-    Vector3 m_EulerAngleVelocity;
-    Rigidbody rb;
 
     void Start()
     {
         leeActive = true; //John is not active when the scene begins.
-        rb = GetComponent<Rigidbody>();
-        m_EulerAngleVelocity = new Vector3(0, 0, 0);
     }
 
     void Update()
@@ -40,10 +34,7 @@ public class LeeController : MonoBehaviour
     void LeeMovement()
     {
         if (leeActive)
-        {
-            leeCam.enabled = true; //Lee's camera is activated. 
-
-            
+        {            
             float hor = Input.GetAxis("Horizontal");
             float ver = Input.GetAxis("Vertical");
             //transform.Rotate(0, Input.GetAxis("Rotate") * 60 * Time.deltaTime, 0);
@@ -57,7 +48,6 @@ public class LeeController : MonoBehaviour
 
         if (!leeActive)
         {
-           leeCam.enabled = false; //John's camera is deactivated.
 
             if (ChrisController.chrisActive)
             {

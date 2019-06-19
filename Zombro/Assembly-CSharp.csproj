@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\CamController.cs" />
     <Compile Include="Assets\Scripts\CheckpointTrack.cs" />
     <Compile Include="Assets\Scripts\ChrisController.cs" />
+    <Compile Include="Assets\Scripts\GunRotate.cs" />
     <Compile Include="Assets\Scripts\JohnController.cs" />
     <Compile Include="Assets\Scripts\LeeController.cs" />
     <Compile Include="Assets\Scripts\LeePistol.cs" />

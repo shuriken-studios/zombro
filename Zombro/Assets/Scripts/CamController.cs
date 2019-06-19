@@ -33,7 +33,7 @@ public class CamController : MonoBehaviour
         {
             Vector3 pos = John.transform.position;
             pos.y += cameraHeight;
-            pos.z = cameraWidth;
+            pos.z += cameraWidth;
             transform.position = pos;
         }
     }

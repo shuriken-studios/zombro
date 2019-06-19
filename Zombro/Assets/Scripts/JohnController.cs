@@ -5,7 +5,6 @@ using UnityEngine;
 public class JohnController : MonoBehaviour
 {
     public float speed;
-    public Camera johnCam;
     public static bool johnActive;
     public Transform Lee;
     public Transform Chris;
@@ -36,15 +35,14 @@ public class JohnController : MonoBehaviour
     {
         if (johnActive)
         {
-            johnCam.enabled = true; //Chris's camera is activated. 
-
             float hor = Input.GetAxis("Horizontal");
             float ver = Input.GetAxis("Vertical");
             //transform.Rotate(0, Input.GetAxis("Rotate") * 60 * Time.deltaTime, 0);
             Vector3 johnMovement = new Vector3(hor, 0, ver);
             johnMovement = Vector3.ClampMagnitude(johnMovement, 1) * speed * Time.deltaTime;
-            transform.Translate(johnMovement, Space.Self);
-            transform.Rotate(0, Input.GetAxis("Horizontal"), 0);
+            transform.Translate(johnMovement, Space.World);
+            //transform.Rotate(0, Input.GetAxis("Horizontal"), 0);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(johnMovement), 15f);
 
             /*
             float hor = Input.GetAxis("Horizontal");
@@ -58,7 +56,6 @@ public class JohnController : MonoBehaviour
 
         if (!johnActive)
         {
-            johnCam.enabled = false; //John's camera is deactivated.
 
             if (LeeController.leeActive)
             {
