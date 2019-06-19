@@ -33,6 +33,7 @@ public class LeePistol : MonoBehaviour
                         StartCoroutine(Fire());
                         pistolShot.Play();
                     }
+
                 }
             }
         }

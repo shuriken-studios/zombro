@@ -104,9 +104,9 @@ GameObject:
   - component: {fileID: 7259120622263203857}
   - component: {fileID: 8718842950164055814}
   - component: {fileID: 5008946712260061384}
-  - component: {fileID: 5583560328856867553}
   - component: {fileID: 2626353846634305115}
   - component: {fileID: 1448288939}
+  - component: {fileID: 594846388}
   m_Layer: 0
   m_Name: Lee
   m_TagString: Untagged
@@ -204,24 +204,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5583560328856867553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2508261332525884184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b931058ae047ff348a10a0ec980b5639, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firing: 0
-  pistolBullet: {fileID: 2395489713071198134, guid: 9827df76197227c4c87e1a94ec4680c3,
-    type: 3}
-  bulletSpeed: 50
-  spawnPoint: {fileID: 3065747974433093795}
-  pistolShot: {fileID: 0}
 --- !u!82 &2626353846634305115
 AudioSource:
   m_ObjectHideFlags: 0
@@ -333,6 +315,24 @@ MonoBehaviour:
   speed: 3
   Chris: {fileID: 0}
   John: {fileID: 0}
+--- !u!114 &594846388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2508261332525884184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b931058ae047ff348a10a0ec980b5639, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firing: 0
+  pistolBullet: {fileID: 2395489713071198134, guid: 9827df76197227c4c87e1a94ec4680c3,
+    type: 3}
+  bulletSpeed: 50
+  spawnPoint: {fileID: 3065747974433093795}
+  pistolShot: {fileID: 0}
 --- !u!1 &5554493135584401110
 GameObject:
   m_ObjectHideFlags: 0
