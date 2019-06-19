@@ -37,21 +37,14 @@ public class JohnController : MonoBehaviour
         {
             float hor = Input.GetAxis("Horizontal");
             float ver = Input.GetAxis("Vertical");
-            //transform.Rotate(0, Input.GetAxis("Rotate") * 60 * Time.deltaTime, 0);
             Vector3 johnMovement = new Vector3(hor, 0, ver);
             johnMovement = Vector3.ClampMagnitude(johnMovement, 1) * speed * Time.deltaTime;
             transform.Translate(johnMovement, Space.World);
-            //transform.Rotate(0, Input.GetAxis("Horizontal"), 0);
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(johnMovement), 15f);
-
-            /*
-            float hor = Input.GetAxis("Horizontal");
-            float ver = Input.GetAxis("Vertical");
-
-            Vector3 johnMovement = new Vector3(hor, 0, ver);
-            johnMovement = Vector3.ClampMagnitude(johnMovement, 1) * speed * Time.deltaTime;
-            transform.Translate(johnMovement, Space.World);
-            */
+            //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(leeMovement), 15f);
+            if (johnMovement != Vector3.zero)
+            {
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(johnMovement.normalized), 0.2f);
+            }
         }
 
         if (!johnActive)

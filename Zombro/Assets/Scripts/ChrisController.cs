@@ -35,24 +35,16 @@ public class ChrisController : MonoBehaviour
     {
         if (chrisActive)
         {
-
             float hor = Input.GetAxis("Horizontal");
             float ver = Input.GetAxis("Vertical");
-            //transform.Rotate(0, Input.GetAxis("Rotate") * 60 * Time.deltaTime, 0);
             Vector3 chrisMovement = new Vector3(hor, 0, ver);
             chrisMovement = Vector3.ClampMagnitude(chrisMovement, 1) * speed * Time.deltaTime;
             transform.Translate(chrisMovement, Space.World);
-            //transform.Rotate(0, Input.GetAxis("Horizontal"), 0);
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(chrisMovement), 15f);
-
-            /*
-            float hor = Input.GetAxis("Horizontal");
-            float ver = Input.GetAxis("Vertical");
-
-            Vector3 chrisMovement = new Vector3(hor, 0, ver);
-            chrisMovement = Vector3.ClampMagnitude(chrisMovement, 1) * speed * Time.deltaTime;
-            transform.Translate(chrisMovement, Space.World);
-            */
+            //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(leeMovement), 15f);
+            if (chrisMovement != Vector3.zero)
+            {
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(chrisMovement.normalized), 0.2f);
+            }
         }
         if (!chrisActive)
         {

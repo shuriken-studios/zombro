@@ -8,8 +8,6 @@ public class LeeController : MonoBehaviour
     public static bool leeActive;
     public Transform Chris;
     public Transform John;
-    [SerializeField] private float m_TurnSpeed = 100f;
-    [SerializeField] private float m_MoveSpeed = 100f;
 
     void Start()
     {
@@ -37,7 +35,6 @@ public class LeeController : MonoBehaviour
     {
         if (leeActive)
         {
-
             //PUT THIS IN A SEPARATE SCRIPT AND ATTACH IT TO THE GUNS. CREATE NEW AXES CONTROLLED BY THE MOUSE!
             //float turn = Input.GetAxis("Horizontal");
             //transform.Rotate(transform.up, turn * m_TurnSpeed * Time.deltaTime);
@@ -47,7 +44,11 @@ public class LeeController : MonoBehaviour
             Vector3 leeMovement = new Vector3(hor, 0, ver);
             leeMovement = Vector3.ClampMagnitude(leeMovement, 1) * speed * Time.deltaTime;
             transform.Translate(leeMovement, Space.World);
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(leeMovement), 15f);
+            //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(leeMovement), 15f);
+            if (leeMovement != Vector3.zero)
+            {
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(leeMovement.normalized), 0.2f);
+            }
         }
 
         if (!leeActive)
