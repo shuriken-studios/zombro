@@ -25,7 +25,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 494}
   m_MaxSize: {x: 18008, y: 14044}
   vertical: 0
-  controlID: 2381
+  controlID: 11176
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 494}
   m_MaxSize: {x: 10002, y: 14044}
   vertical: 1
-  controlID: 2382
+  controlID: 11135
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -197,9 +197,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 17.073666, y: -3.7472115, z: -22.09013}
+    m_Target: {x: 17.32937, y: -3.4931846, z: -23.59158}
     speed: 2
-    m_Value: {x: 17.073666, y: -3.7472115, z: -22.09013}
+    m_Value: {x: 17.32937, y: -3.4931846, z: -23.59158}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -228,13 +228,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.1766878, y: 0.0026946624, z: -0.00038788767, w: 0.9843185}
+    m_Target: {x: 0.24839044, y: -0.10750776, z: 0.027847882, w: 0.9623296}
     speed: 2
-    m_Value: {x: 0.17667818, y: 0.0026945157, z: -0.00038786654, w: 0.98426485}
+    m_Value: {x: 0.24837685, y: -0.10750188, z: 0.027846359, w: 0.962277}
   m_Size:
-    m_Target: 10.085368
+    m_Target: 4.3416586
     speed: 2
-    m_Value: 10.085368
+    m_Value: 4.3416586
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -413,19 +413,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets
+  - Assets/Scripts
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Peay\Documents\GitHub\zombro\Zombro
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 5a2b0000
-    m_LastClickedID: 11098
+    m_SelectedIDs: c4330000
+    m_LastClickedID: 13252
     m_ExpandedIDs: 000000005a2b0000ca2e0000902f00006a360000f036000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -479,8 +479,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 9c380000
-    m_LastClickedInstanceID: 14492
+    m_SelectedInstanceIDs: 84fbffff
+    m_LastClickedInstanceID: -1148
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000623e00000000000084240000
     m_RenameOverlay:
@@ -506,7 +506,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 23}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 16
   m_DirectoriesAreaWidth: 379
 --- !u!114 &10
@@ -592,7 +592,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 8cfbffff
+      m_ExpandedIDs: 8cfbffff9c380000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 

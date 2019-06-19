@@ -47,7 +47,7 @@ public class LeeController : MonoBehaviour
             //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(leeMovement), 15f);
             if (leeMovement != Vector3.zero)
             {
-                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(leeMovement.normalized), 0.2f);
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(leeMovement.normalized), 0.1f);
             }
         }
 

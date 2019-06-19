@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 494}
   m_MaxSize: {x: 18008, y: 14044}
   vertical: 0
-  controlID: 2796
+  controlID: 11482
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 494}
   m_MaxSize: {x: 10002, y: 14044}
   vertical: 1
-  controlID: 2797
+  controlID: 11483
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -366,9 +366,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 17.073666, y: -3.7472115, z: -22.09013}
+    m_Target: {x: 17.32937, y: -3.4931846, z: -23.59158}
     speed: 2
-    m_Value: {x: 17.073666, y: -3.7472115, z: -22.09013}
+    m_Value: {x: 17.32937, y: -3.4931846, z: -23.59158}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -397,13 +397,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.1766878, y: 0.0026946624, z: -0.00038788767, w: 0.9843185}
+    m_Target: {x: 0.24839044, y: -0.10750776, z: 0.027847882, w: 0.9623296}
     speed: 2
-    m_Value: {x: -0.1766878, y: -0.0026946622, z: 0.00038788767, w: -0.98431844}
+    m_Value: {x: -0.24839045, y: 0.107507765, z: -0.027847882, w: -0.9623297}
   m_Size:
-    m_Target: 10.085368
+    m_Target: 4.3416586
     speed: 2
-    m_Value: 10.085368
+    m_Value: 4.3416586
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -555,19 +555,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets
+  - Assets/Scripts
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Peay\Documents\GitHub\zombro\Zombro
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 5a2b0000
-    m_LastClickedID: 11098
+    m_SelectedIDs: c4330000
+    m_LastClickedID: 13252
     m_ExpandedIDs: 000000005a2b0000ca2e0000902f00006a360000f036000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -648,7 +648,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 23}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 16
   m_DirectoriesAreaWidth: 379
 --- !u!114 &16
@@ -706,9 +706,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 9c380000
-      m_LastClickedID: 14492
-      m_ExpandedIDs: 8cfbffff
+      m_SelectedIDs: 84fbffff
+      m_LastClickedID: -1148
+      m_ExpandedIDs: 8cfbffff9c380000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
