@@ -7,11 +7,13 @@ public class GunRotate : MonoBehaviour
     // The target marker.
     Transform target;
     public Camera mainCam;
+    public float rotateSpeed = 3f;
     // Angular speed in radians per sec.
-    float speed;
-
+   
     void Update()
     {
+        //Quaternion newRotation;
+
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = mainCam.ScreenPointToRay(Input.mousePosition);
@@ -26,7 +28,9 @@ public class GunRotate : MonoBehaviour
                     Debug.Log(hit.collider.gameObject.tag);
                     target = hit.transform;
                     transform.LookAt(target);
-                    //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(target.position), 0.1f);
+                    //newRotation = Quaternion.LookRotation(transform.position - target.position, Vector3.back);
+                    //transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, Time.deltaTime * rotateSpeed);
+                    //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(target.position.normalized), 0.1f);
                 }
             }
             /*

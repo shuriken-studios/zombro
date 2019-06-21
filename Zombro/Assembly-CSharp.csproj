@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\PistolBulletController.cs" />
     <Compile Include="Assets\Scripts\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\Zombie.cs" />
+    <Compile Include="Assets\Scripts\ZombieHitbox.cs" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Peay/Documents/GitHub/zombro/Zombro/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
