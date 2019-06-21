@@ -4,7 +4,7 @@ using System.Collections;
 public class LeePistol : MonoBehaviour
 {
     public static bool pistolActive; //Tells whether or not this weapon is in use.
-    public bool firing = false; //A shot is being fired
+    public static bool firing = false; //A shot is being fired
     public PistolBulletController pistolBullet;
     public float bulletSpeed; //Speed of bullet
     public Transform spawnPoint;

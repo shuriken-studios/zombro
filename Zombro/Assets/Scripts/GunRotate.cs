@@ -26,6 +26,7 @@ public class GunRotate : MonoBehaviour
                     Debug.Log(hit.collider.gameObject.tag);
                     target = hit.transform;
                     transform.LookAt(target);
+                    //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(target.position), 0.1f);
                 }
             }
             /*

@@ -38,17 +38,16 @@ public class LeeController : MonoBehaviour
             //PUT THIS IN A SEPARATE SCRIPT AND ATTACH IT TO THE GUNS. CREATE NEW AXES CONTROLLED BY THE MOUSE!
             //float turn = Input.GetAxis("Horizontal");
             //transform.Rotate(transform.up, turn * m_TurnSpeed * Time.deltaTime);
-            
-            float hor = Input.GetAxis("Horizontal");
-            float ver = Input.GetAxis("Vertical");
-            Vector3 leeMovement = new Vector3(hor, 0, ver);
-            leeMovement = Vector3.ClampMagnitude(leeMovement, 1) * speed * Time.deltaTime;
-            transform.Translate(leeMovement, Space.World);
-            //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(leeMovement), 15f);
-            if (leeMovement != Vector3.zero)
-            {
-                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(leeMovement.normalized), 0.1f);
-            }
+                float hor = Input.GetAxis("Horizontal");
+                float ver = Input.GetAxis("Vertical");
+                Vector3 leeMovement = new Vector3(hor, 0, ver);
+                leeMovement = Vector3.ClampMagnitude(leeMovement, 1) * speed * Time.deltaTime;
+                transform.Translate(leeMovement, Space.World);
+                //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(leeMovement), 15f);
+                if (leeMovement != Vector3.zero)
+                {
+                    transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(leeMovement.normalized), 0.1f);
+                }
         }
 
         if (!leeActive)
