@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Jump.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
@@ -72,9 +73,12 @@
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
     <Compile Include="Assets\Scripts\CamController.cs" />
     <Compile Include="Assets\Scripts\ChrisController.cs" />
+    <Compile Include="Assets\Scripts\ChrisJump.cs" />
     <Compile Include="Assets\Scripts\GunRotate.cs" />
     <Compile Include="Assets\Scripts\JohnController.cs" />
+    <Compile Include="Assets\Scripts\JohnJump.cs" />
     <Compile Include="Assets\Scripts\LeeController.cs" />
+    <Compile Include="Assets\Scripts\LeeJump.cs" />
     <Compile Include="Assets\Scripts\LeePistol.cs" />
     <Compile Include="Assets\Scripts\PistolBulletController.cs" />
     <Compile Include="Assets\Scripts\PlayerStats.cs" />

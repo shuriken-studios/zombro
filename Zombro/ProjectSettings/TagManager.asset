@@ -6,6 +6,8 @@ TagManager:
   tags:
   - RegZombie
   - PistolBullet
+  - Fire
+  - Jump
   layers:
   - Default
   - TransparentFX

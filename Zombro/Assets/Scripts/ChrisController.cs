@@ -9,10 +9,16 @@ public class ChrisController : MonoBehaviour
     public static bool chrisActive;
     public Transform Lee;
     public Transform John;
+    public Vector3 jump;
+    public float jumpForce = 2.0f;
+    public bool isGrounded;
+    Rigidbody rb;
 
     void Start()
     {
         chrisActive = false; //Chris is inactive when the scene begins.
+        rb = GetComponent<Rigidbody>();
+        jump = new Vector3(0.0f, 3.0f, 0.0f);
     }
 
     void Update()
@@ -28,6 +34,24 @@ public class ChrisController : MonoBehaviour
         {
             chrisActive = false;
             JohnController.johnActive = true;
+        }
+    }
+
+    void OnCollisionStay()
+    {
+        isGrounded = true;
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (!chrisActive)
+        {
+            if (other.gameObject.tag == "Jump")
+            {
+                rb.AddForce(jump * jumpForce, ForceMode.Impulse);
+                isGrounded = false;
+                Debug.Log("Hit");
+            }
         }
     }
 

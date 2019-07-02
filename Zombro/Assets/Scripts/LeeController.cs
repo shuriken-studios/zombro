@@ -8,10 +8,16 @@ public class LeeController : MonoBehaviour
     public static bool leeActive;
     public Transform Chris;
     public Transform John;
+    public Vector3 jump;
+    public float jumpForce = 2.0f;
+    public bool isGrounded;
+    Rigidbody rb;
 
     void Start()
     {
         leeActive = true; //John is not active when the scene begins.
+        rb = GetComponent<Rigidbody>();
+        jump = new Vector3(0.0f, 3.0f, 0.0f);
     }
 
     void Update()
@@ -29,6 +35,24 @@ public class LeeController : MonoBehaviour
             JohnController.johnActive = true;
         }
 
+    }
+
+    void OnCollisionStay()
+    {
+        isGrounded = true;
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (!leeActive)
+        {
+            if (other.gameObject.tag == "Jump")
+            {
+                rb.AddForce(jump * jumpForce, ForceMode.Impulse);
+                isGrounded = false;
+                Debug.Log("Hit");
+            }
+        }
     }
 
     void LeeMovement()
