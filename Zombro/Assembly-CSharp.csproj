@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\ChrisController.cs" />
     <Compile Include="Assets\Scripts\ChrisJump.cs" />
     <Compile Include="Assets\Scripts\GunRotate.cs" />
+    <Compile Include="Assets\Scripts\HealthClamper.cs" />
     <Compile Include="Assets\Scripts\JohnController.cs" />
     <Compile Include="Assets\Scripts\JohnJump.cs" />
     <Compile Include="Assets\Scripts\LeeController.cs" />
