@@ -22,8 +22,28 @@ public class ZombieHitbox : MonoBehaviour
 
         if (enemyHealth == 100)
         {
-            //rend.material.SetColor("_Color", Color.green);
+          Healthbar.GetComponent<Image>().color = Color.green;
 
+        }
+
+        if (enemyHealth == 80)
+        {
+            Healthbar.GetComponent<Image>().color = new Color32(241,255,35,255);
+        }
+
+        if (enemyHealth == 60)
+        {
+            Healthbar.GetComponent<Image>().color = new Color32(255,190,0,255);
+        }
+
+        if (enemyHealth == 40)
+        {
+            Healthbar.GetComponent<Image>().color = new Color32(221,94,20,255);
+        }
+
+        if (enemyHealth == 20)
+        {
+            Healthbar.GetComponent<Image>().color = Color.red;
         }
 
         if (enemyHealth == 0) //Once the enemy is out of health, it will dissappear. This code may be modified to leave a corpse behind or something. 
